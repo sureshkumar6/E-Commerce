@@ -20,16 +20,24 @@ app.post('/login', async (req, resp) => {
     // let user = await usersModel.findOne(req.body).select("-password")
     if (req.body.email && req.body.password) {
         let user = await usersModel.findOne(req.body).select("-password")
-        let userDetails = { user }
         if (user) {
             resp.send(user)
         } else {
             resp.send({ result: "user not found" })
         }
     } else {
-        resp.send({ result: "user not found" })
+        resp.send({ result: "outside user not found" })
     }
 
+})
+app.post('/test', async (req,resp)=>{
+    if (req.body.email && req.body.password){
+        let user = await usersModel.findOne(req.body)
+        console.log(user)
+        resp.send(user)
+    }else{
+        resp.send("nothing")
+    }
 })
 
 app.post('/add-product', async (req, resp) => {

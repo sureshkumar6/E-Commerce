@@ -2,12 +2,12 @@ import "./App.css";
 import Nav from "./components/Nav.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer.js";
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
+import SignUp from "./components/SignUp.js";
+import Login from "./components/Login.js";
 import PrivateComponent from "./components/PrivateComponent.js";
-import AddProduct from "./components/AddProduct";
-import ProductList from "./components/ProductList";
-import UpdateProduct from "./components/UpdateProduct";
+import AddProduct from "./components/AddProduct.js";
+import ProductList from "./components/ProductList.js";
+import UpdateProduct from "./components/UpdateProduct.js";
 
 function App() {
   return (

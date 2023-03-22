@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { json, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -23,7 +23,6 @@ const SignUp = () => {
     });
     result = await result.json();
     localStorage.setItem("user", JSON.stringify(result));
-    console.log(result);
     navigate("/");
   };
 
